@@ -12,24 +12,24 @@ DS-IN-GO is a Go module that provides implementations of common data structures.
 To install DS-IN-GO, run:
 
 ```sh
-go get github.com/yourusername/DS-IN-GO
+go get github.com/mostafa-mahmood/DS-IN-GO
 ```
 
 Then, import the package in your Go project:
 
 ```go
-import "github.com/yourusername/DS-IN-GO/linkedlist"
+import "github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
 ```
 
 ## Usage
 
-### Linked List Example
+### Linked List
 
 ```go
 package main
 
 import (
-	"github.com/yourusername/DS-IN-GO/linkedlist"
+	"github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
 )
 
 func main() {
