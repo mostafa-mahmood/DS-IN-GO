@@ -10,55 +10,6 @@ go get github.com/mostafa-mahmood/DS-IN-GO
 
 ## LinkedList Usage
 
-### Basic Operations
-
-```go
-package main
-
-import (
-    "github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
-)
-
-func main() {
-    // Create a new integer linked list
-    list := linkedlist.NewLinkedList[int]()
-    
-    // Add elements
-    list.InsertHead(1)
-    list.InsertTail(2)
-    list.InsertAt(1, 3)
-    
-    // Print the list
-    list.PrintList() // Output: Head -> 1 -> 3 -> 2 -> nil
-    
-    // Convert to slice
-    slice := list.ToSlice() // []int{1, 3, 2}
-    
-    // Create from slice
-    newList := linkedlist.FromSlice([]int{4, 5, 6})
-}
-```
-
-### Functional Operations
-
-```go
-// Using ForEach to modify elements
-list.ForEach(func(val *int) {
-    *val *= 2
-})
-
-// Using Filter to create a new list
-evenNumbers := list.Filter(func(val int) bool {
-    return val%2 == 0
-})
-
-// Using Iterator
-iter := list.Iterator()
-for val, ok := iter(); ok; val, ok = iter() {
-    fmt.Printf("%v ", val)
-}
-```
-
 ### Constructor
 - `NewLinkedList[T comparable]() *LinkedList[T]` - Creates a new empty linked list
 
