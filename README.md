@@ -8,7 +8,12 @@ A Go module providing generic implementations of fundamental data structures. Th
 go get github.com/mostafa-mahmood/DS-IN-GO
 ```
 
-## LinkedList Usage
+```GO
+import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
+// replace linkedlist with the needed package name
+```
+
+## linkedlist
 
 ### Constructor
 - `NewLinkedList[T comparable]() *LinkedList[T]` - Creates a new empty linked list
@@ -46,6 +51,21 @@ go get github.com/mostafa-mahmood/DS-IN-GO
 | `Filter(func(T) bool) *LinkedList[T]` | Creates filtered list | O(n) |
 | `Iterator() func() (T, bool)` | Returns iterator function | O(1) |
 | `PrintList()` | Prints list contents | O(n) |
+
+## Stack
+
+### Constructor
+- `NewStack[T comparable]() *Stack[T]` - Creates a new empty stack
+
+### Core Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `Push(value T)` | Adds an element to the top | O(1) |
+| `Pop() (T, error)` | Removes and returns the top element | O(1) |
+| `Peek() (T, error)` | Returns the top element without removing | O(1) |
+| `IsEmpty() bool` | Checks if stack is empty | O(1) |
+| `ListSize() int` | Returns the number of elements | O(1) |
+| `Clear()` | Removes all elements from the stack | O(1) |
 
 ## Contributing
 
