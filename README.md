@@ -67,6 +67,15 @@ import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 | `ListSize() int` | Returns the number of elements | O(1) |
 | `Clear()` | Removes all elements from the stack | O(1) |
 
+### Utility Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `String() string` | Returns string representation of stack | O(n) |
+| `Contains(value T) bool` | Checks if value exists in stack | O(n) |
+| `ToSlice() []T` | Converts stack to slice (bottom to top order) | O(n) |
+| `FromSlice(items []T)` | Creates stack from slice | O(n) |
+| `ForEach(fn func(T))` | Applies function to each element | O(n) |
+
 ## Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
@@ -78,12 +87,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Roadmap
 
 Future implementations planned:
-- Stack
 - Queue
 - Tree
 - Graph
 - Hash Table
-- Graph
 
 ## Support
 
