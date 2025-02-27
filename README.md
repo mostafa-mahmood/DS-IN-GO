@@ -9,7 +9,7 @@ go get github.com/mostafa-mahmood/DS-IN-GO
 ```
 
 ```GO
-import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
+import "github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
 // replace linkedlist with the needed package name
 ```
 
@@ -17,6 +17,10 @@ import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 
 ### Constructor
 - `NewLinkedList[T comparable]() *LinkedList[T]` - Creates a new empty linked list
+```GO
+//Example
+ll := linkedlist.NewLinkedList[int]()
+```
 
 ### Insertion Operations
 | Method | Description | Time Complexity |
@@ -56,6 +60,10 @@ import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 
 ### Constructor
 - `NewStack[T comparable]() *Stack[T]` - Creates a new empty stack
+```GO
+//Example
+s := stack.NewStack[int]()
+```
 
 ### Core Operations
 | Method | Description | Time Complexity |
@@ -80,6 +88,10 @@ import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 
 ### Constructor
 - `NewQueue[T comparable]() *Queue[T]` - Creates a new empty queue
+```GO
+//Example
+q := queue.NewQueue[int]()
+```
 
 ### Core Operations
 | Method | Description | Time Complexity |
