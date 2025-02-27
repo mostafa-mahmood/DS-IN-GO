@@ -20,9 +20,6 @@ func NewStack[T comparable]() *Stack[T] {
 	return &Stack[T]{}
 }
 
-// Methods
-
-// adds element to the top of the stack
 func (s *Stack[T]) Push(value T) {
 	newNode := &Node[T]{
 		Value: value,
@@ -32,7 +29,6 @@ func (s *Stack[T]) Push(value T) {
 	s.Top = newNode
 }
 
-// returns and remove element from the top of the stack
 func (s *Stack[T]) Pop() (T, error) {
 	if s.IsEmpty() {
 		var zero T
@@ -44,7 +40,6 @@ func (s *Stack[T]) Pop() (T, error) {
 	return data, nil
 }
 
-// returns the element on the top of the stack
 func (s *Stack[T]) Peek() (T, error) {
 	if s.IsEmpty() {
 		var zero T
@@ -89,7 +84,7 @@ func (s *Stack[T]) ToSlice() []T {
 		result = append(result, current.Value)
 		current = current.Next
 	}
-	// Reverse to match natural stack order (bottom to top)
+
 	for i, j := 0, len(result)-1; i < j; i, j = i+1, j-1 {
 		result[i], result[j] = result[j], result[i]
 	}
@@ -98,7 +93,7 @@ func (s *Stack[T]) ToSlice() []T {
 
 func (s *Stack[T]) FromSlice(items []T) {
 	s.Clear()
-	// Push in reverse to maintain original order
+
 	for i := len(items) - 1; i >= 0; i-- {
 		s.Push(items[i])
 	}
@@ -112,12 +107,6 @@ func (s *Stack[T]) ForEach(fn func(T)) {
 	}
 }
 
-// return the number of elements in the stack
-func (s *Stack[T]) ListSize() int {
-	return s.Size
-}
-
-// deletes all the elmenets in the stack
 func (s *Stack[T]) Clear() {
 	s.Top = nil
 	s.Size = 0

@@ -76,6 +76,28 @@ import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 | `FromSlice(items []T)` | Creates stack from slice | O(n) |
 | `ForEach(fn func(T))` | Applies function to each element | O(n) |
 
+## Queue
+
+### Constructor
+- `NewQueue[T comparable]() *Queue[T]` - Creates a new empty queue
+
+### Core Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `Enqueue(value T)` | Adds an element to the rear | O(1) |
+| `Dequeue() (T, error)` | Removes and returns the front element | O(1) |
+| `Peek() (T, error)` | Returns the front element without removing | O(1) |
+| `IsEmpty() bool` | Checks if queue is empty | O(1) |
+| `Size` | Property showing number of elements | O(1) |
+| `Clear()` | Removes all elements from the queue | O(1) |
+
+### Utility Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `String() string` | Returns string representation of queue | O(n) |
+| `Contains(value T) bool` | Checks if value exists in queue | O(n) |
+| `ForEach(fn func(T))` | Applies function to each element | O(n) |
+
 ## Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
@@ -87,10 +109,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Roadmap
 
 Future implementations planned:
-- Queue
-- Tree
-- Graph
-- Hash Table
+- Binary Tree
+- Binary Search Tree
+- AVL Tree
+- Heap
+- Graphs
 
 ## Support
 

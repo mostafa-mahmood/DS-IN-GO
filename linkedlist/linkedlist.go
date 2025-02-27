@@ -286,11 +286,6 @@ func (l *LinkedList[T]) IsEmpty() bool {
 	return l.Size == 0
 }
 
-// Check list size
-func (l *LinkedList[T]) ListSize() int {
-	return l.Size
-}
-
 // Remove all nodes
 func (l *LinkedList[T]) Clear() {
 	l.Head = nil
