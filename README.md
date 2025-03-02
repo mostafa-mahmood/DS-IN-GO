@@ -9,7 +9,7 @@ go get github.com/mostafa-mahmood/DS-IN-GO
 ```
 
 ```GO
-import "github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
+import github.com/mostafa-mahmood/DS-IN-GO/linkedlist
 // replace linkedlist with the needed package name
 ```
 
@@ -17,10 +17,6 @@ import "github.com/mostafa-mahmood/DS-IN-GO/linkedlist"
 
 ### Constructor
 - `NewLinkedList[T comparable]() *LinkedList[T]` - Creates a new empty linked list
-```GO
-//Example
-ll := linkedlist.NewLinkedList[int]()
-```
 
 ### Insertion Operations
 | Method | Description | Time Complexity |
@@ -60,10 +56,6 @@ ll := linkedlist.NewLinkedList[int]()
 
 ### Constructor
 - `NewStack[T comparable]() *Stack[T]` - Creates a new empty stack
-```GO
-//Example
-s := stack.NewStack[int]()
-```
 
 ### Core Operations
 | Method | Description | Time Complexity |
@@ -88,10 +80,6 @@ s := stack.NewStack[int]()
 
 ### Constructor
 - `NewQueue[T comparable]() *Queue[T]` - Creates a new empty queue
-```GO
-//Example
-q := queue.NewQueue[int]()
-```
 
 ### Core Operations
 | Method | Description | Time Complexity |
@@ -110,6 +98,36 @@ q := queue.NewQueue[int]()
 | `Contains(value T) bool` | Checks if value exists in queue | O(n) |
 | `ForEach(fn func(T))` | Applies function to each element | O(n) |
 
+## BinaryTree
+
+### Constructor
+- `NewBinaryTree[T comparable]() *BinaryTree[T]` - Creates a new empty binary tree
+
+### Insertion Operation
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `Insert(value T)` | Inserts value at first empty place (BFS) | O(n) |
+
+### Traversal Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `BFS() []T` | Returns level-order traversal | O(n) |
+| `DFSPreOrder() []T` | Returns pre-order traversal | O(n) |
+| `DFSInOrder() []T` | Returns in-order traversal | O(n) |
+| `DFSPostOrder() []T` | Returns post-order traversal | O(n) |
+
+### Query Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `Search(value T) bool` | Checks if value exists in the tree | O(n) |
+| `Height() int` | Returns the height of the tree | O(n) |
+| `Depth(value T) int` | Returns the depth of a given value | O(n) |
+
+### Utility Operations
+| Method | Description | Time Complexity |
+|--------|-------------|-----------------|
+| `PrintTree()` | Prints tree dynamically | O(n) |
+
 ## Contributing
 
 We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
@@ -121,7 +139,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Roadmap
 
 Future implementations planned:
-- Binary Tree
 - Binary Search Tree
 - AVL Tree
 - Heap
